@@ -1,13 +1,14 @@
 const HTMLWebPackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
+const appPath = path.resolve(__dirname)
 
 
 module.exports = {
   entry: './frontend/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve('dist'),
+    path: path.resolve(appPath ,'dist'),
     publicPath: '/'
   },
   module: {
