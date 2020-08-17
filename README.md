@@ -42,7 +42,9 @@ Using the Space X API, I’ve created a React application to render a list of Dr
 
 And that's it! 
 
-This should navigate to localhost:8001 in your preferred browser and load the SpaceX application I've built. 
+This should navigate to localhost:8001 in your preferred browser and load the SpaceX application I've built. Alternatively, copy and paste the following URL into the browser:
+
+    http://localhost:8001/
 
 Happy searching!🔍
 

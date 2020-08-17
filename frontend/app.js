@@ -22,7 +22,7 @@ const App = (props) => {
     <main>
       <section className="home">
         <img src="https://www.nutonian.com/img/logo-spacex-gray.png" alt="SpaceX"/>
-        <h3 ref={prompt}>Click To Explore</h3>
+        <h3 ref={prompt}>Click The Buttons Below To Explore</h3>
         <div className="navigation">
           <button onClick={(e) => createNav(e)} className="button is-medium">ROCKETS</button>
           <button onClick={(e) => createNav(e)} className="button is-medium">DRAGONS</button>
