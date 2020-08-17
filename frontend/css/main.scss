@@ -87,13 +87,13 @@ main {
   background-color: $spaceblueopacity;
 }
   .modal-content {
-    @include sizeAndLayout(80%,92%,flex,column,center,space-evenly);
+    @include sizeAndLayout(100%,92%,flex,column,center,space-evenly);
     background-color: $spaceblue;
     color: $offwhite;
     font-family: 'Space Mono', monospace;
     img {
-      height: 25%;
-      width: auto;
+      height: auto;
+      width: 90%;
       display: flex;
       align-self: center;
     }
