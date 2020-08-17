@@ -50,7 +50,9 @@ Happy searching!🔍
 
 ## Future Features
 
-- To implement React router for navigation to different components across the application and for the UI to be inline with URL.  
+- To implement React router for navigation to different components across the application and for the UI to be inline with URL.
+
+- Have a spinner to be available if data was yet to fetched from the API for user experience.
 
 - Add a fade on the modal element to ensure a smooth transition once the user has clicked the plus button. 
 

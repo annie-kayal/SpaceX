@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
 import Card from './Card'
 import Axios from 'axios'
-
 
 const List = ({ selectedNav }) => {
 
@@ -14,16 +12,15 @@ const List = ({ selectedNav }) => {
   }, [selectedNav])
 
   return (
-     <>
-  
-    {data && data.map(el => {
-      return (
-        <Card
-          key={el.id}
-          el={el} />
-      )
-    })}
-  </>
+    <>
+      {data && data.map(el => {
+        return (
+          <Card
+            key={el.id}
+            el={el} />
+        )
+      })}
+    </>
   )
 }
 

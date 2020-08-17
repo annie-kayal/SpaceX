@@ -1,15 +1,14 @@
 const HTMLWebPackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const path = require('path')
-const appPath = path.resolve(__dirname)
 
 
 module.exports = {
   entry: './frontend/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(appPath ,'dist'),
-    publicPath: '/SpaceX/'
+    path: path.resolve('dist'),
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -34,8 +33,5 @@ module.exports = {
       inject: 'body'
     })
   ],
-  performance: {
-    maxAssetSize: 1000,
-    hints: false
-  }
+  performance: { hints: false }
 }
