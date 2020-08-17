@@ -22,7 +22,7 @@ Using the Space X API, I’ve created a React application to render a list of Dr
 
   ### Step Two: 
 
-  Once in your designated folder, press the lovely green code button up there. You can choose between using an HTTPS or SSH. From here, type the following command into your terminal window: 
+  Once in your designated folder, press the lovely green code button up there⬆️. You can choose between using an HTTPS or SSH. From here, type the following command into your terminal window: 
 
   **Note:** I’ve used SSH for the example below
 
