@@ -1,0 +1,224 @@
+$spacegrey :  #cccecf;
+$offwhite : #f9f1f1;
+$spaceblack: #0a0a0a;
+$spaceblue: #1a1b30;
+$spaceblueopacity: rgba($spaceblack, 0.5);
+$spacepurple: #310047;
+
+@mixin sizeAndLayout($height, $width, $display, $direction, $align, $justify) {
+  height: $height;
+  width: $width;
+  display: $display;;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, #root {
+  height: 100vh;
+  width: 100vw;
+}
+
+// App.js
+
+main {
+  height: 100%;
+  width: 100%;
+.home {
+  background-image: url('https://www.publicdomainpictures.net/pictures/260000/velka/constellation-of-stars.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include sizeAndLayout(100vh,100vw,flex,column,center,center);
+  font-family: 'Orbitron', sans-serif;
+  h3 {
+    font-size: 1.3em;
+    color: $offwhite;
+  }
+}
+.navigation {
+  @include sizeAndLayout(10%,90%,flex,row,center,space-between);
+}
+.button {
+  font-family: 'Orbitron', sans-serif;
+  border: 0.1em solid $spacegrey;
+  &:hover {
+    background-color: $spacegrey;
+    color: $spacepurple;
+  }
+}
+}
+
+// List.js
+
+.list-container {
+  @include sizeAndLayout(0%,100%,flex,column,center,flex-start);
+  opacity: 0;
+}
+
+// Card.js
+
+.card {
+  background-color: $offwhite;
+  @include sizeAndLayout(10%,80%,flex,column,center,center);
+  margin: 3% 0;
+  padding: 1.5%;
+  .content {
+    @include sizeAndLayout(auto,97%,flex,row,center,space-between);
+    font-family: 'Space Mono', monospace;
+    h1 {
+      margin: 0;
+      font-weight: 400;
+      font-size: 1.1em;
+    }
+  }
+}
+
+
+// Modal.js
+
+.modal-background {
+  background-color: $spaceblueopacity;
+}
+  .modal-content {
+    @include sizeAndLayout(80%,92%,flex,column,center,space-evenly);
+    background-color: $spaceblue;
+    color: $offwhite;
+    font-family: 'Space Mono', monospace;
+    img {
+      height: 25%;
+      width: auto;
+      display: flex;
+      align-self: center;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3em;
+    }
+    p {
+      font-weight: 900;
+      font-size: 0.8em;
+    }
+    ul {
+      @include sizeAndLayout(auto,95%,flex,row,flex-start,space-evenly);
+      color: $spacepurple;
+      li {
+        width: 25%;
+        text-align: center;
+        background-color: $spacegrey;
+        padding: 0.1em;
+        font-size: 1em;
+      }
+    }
+    #description {
+      width: 95%;
+    }
+    button {
+      border: 0.1em solid $spacegrey;
+      font-family: 'Space Mono', monospace;
+      padding: 0.5em;
+      background-color: $offwhite;
+      a {
+        color: $spaceblack;
+        &:hover {
+          text-decoration: 0.2em solid $spacepurple;
+          color: $spacepurple;
+        }
+      }
+    }
+  }
+
+  // Media Queries
+
+  @media only screen and (min-width: 700px) and (min-height: 100px ) {
+    main {
+      .navigation {
+      max-width: 50vw;
+      }
+    }
+
+    .card {
+      max-width: 50vw; 
+    }
+
+      .modal-content {
+        font-size: 1.2em;
+        img {
+          height: 30%;
+        }
+        .button {
+          font-size: 1em;
+        }
+      }
+  }
+
+
+  @media only screen and (min-width: 1400px) {
+    main {
+      .navigation {
+        width: 45vw;
+      }
+    }
+    .modal-content {
+      width: 50vw;
+    }
+  }
+
+  //  Keyframes 
+
+@keyframes grow {
+  0% {
+    height: 0%;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  50% {
+    height: 20%;
+    overflow: hidden;
+    opacity: 0;
+  }
+  85% {
+    height: 40%;
+    overflow: hidden;
+    opacity: 0;
+  }
+  95% {
+    height: 40%;
+    overflow: hidden;
+    opacity: 0.2;
+  }
+  99% {
+    height: 40%;
+    overflow: hidden;
+    opacity: 0.4;
+  }
+  100% {
+    height: 40%;
+    overflow: scroll;
+    opacity: 1;
+  }
+}
+
+@keyframes shrink {
+from {
+  height: 100%;
+}
+to {
+  height: 10%;
+}   
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }   
+  }
