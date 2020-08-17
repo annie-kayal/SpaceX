@@ -16,7 +16,7 @@ const Modal = ({ el, setModal }) => {
 
   return (
     <div className="modal is-active">
-      <div className="modal-background"></div>
+      < div className="modal-background" ></div >
       <div
         className="modal-content"
         onClick={() => setModal(false)}
@@ -42,7 +42,7 @@ const Modal = ({ el, setModal }) => {
         className="modal-close is-large"
         aria-label="close">
       </button>
-    </div>
+    </div >
   )
 }
 

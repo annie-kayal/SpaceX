@@ -1,6 +1,8 @@
 # SpaceX 🚀🛰
 Using the Space X API, I’ve created a React application to render a list of Dragons and Rockets. On clicking these, an expanded view of either the Dragon or Rocket will appear in a modal with further information. To do this, I’ve used the `/rockets` and `/dragons` endpoints of the API and have used the CSS framework Bulma for styling the UI.
 
+ **Note:** Throughout this project, a number of variables are in snake casing rather than camal casing. This is the direct response from the API in JSON format and needed to be declared in order to access use of them in components for rendering.
+
 ## Tech Used
 
 - HTML
@@ -11,6 +13,8 @@ Using the Space X API, I’ve created a React application to render a list of Dr
 - Axios
 - SCSS
 - Bulma 
+
+
 
 ## How to run Space X locally on your device. 
 
@@ -46,16 +50,15 @@ This should navigate to localhost:8001 in your preferred browser and load the Sp
 
     http://localhost:8001/
 
-Happy searching!🔍
+Happy searching! 🔍
 
 ## Future Features
 
-- To implement React router for navigation to different components across the application and for the UI to be inline with URL.
+- To fully implement React router for navigation to different components across the application and for the UI to be inline with URL.
 
-- Have a spinner to be available if data was yet to fetched from the API for user experience.
+- Have a spinner to be available if data was yet to be fetched from the API for user experience.
 
-- Add a fade on the modal element to ensure a smooth transition once the user has clicked the plus button. 
+- Add a fade on the modal component to ensure a smooth transition once the user clicked the plus button. 
 
 - Have an animated background image of the stars twinkling by using an appropriate gif.  
-
 

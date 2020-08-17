@@ -10,7 +10,7 @@ const Card = ({ el }) => {
 
     <div className='card'>
       <div className="content">
-        <h1> {name} {rocket_name} </h1>
+        <h1> {rocket_name || name} </h1>
         <button
           onClick={() => setModal(true)}
           className='button is-small'>
