@@ -27,8 +27,7 @@ const Home = (props) => {
           {selectedNav &&
             <List
               props={props}
-              selectedNav={selectedNav && selectedNav}
-            />
+              selectedNav={selectedNav && selectedNav}/>
           }
         </div>
       </section>

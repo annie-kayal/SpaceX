@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Modal = ({ el, setModal }) => {
+  
   const {
     rocket_name,
     name,
